@@ -25,6 +25,9 @@
     <string name="rotation">Rotation</string>
     <string name="rotation_vector">Rotation vector</string>
 
+    <string name="error_no_accelerometer_sensor">Fail to start. The required accelerometer sensor is not available on this device</string>
+    <string name="error_no_magnetic_field_sensor">Fail to start. The required magnetic field sensor is not available on this device</string>
+
     <string name="title_activity_compass">Compass</string>
 
 </resources>

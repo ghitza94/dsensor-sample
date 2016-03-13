@@ -53,7 +53,13 @@ public class CompassActivity extends AppCompatActivity implements DProcessedEven
     protected void onResume() {
         super.onResume();
 
-        DSensorManager.startDProcessedSensor(this, mDProcessedSensorType, this);
+        int flag = DSensorManager.startDProcessedSensor(this, mDProcessedSensorType, this);
+        if ((flag & DSensorManager.TYPE_MAGNETIC_FIELD_NOT_AVAILABLE) != 0) {
+            mCompassValueTextView.setText(R.string.error_no_magnetic_field_sensor);
+        } else if ((flag & DSensorManager.TYPE_GRAVITY_NOT_AVAILABLE) != 0
+                && (flag & DSensorManager.TYPE_ACCELEROMETER_NOT_AVAILABLE) != 0) {
+            mCompassValueTextView.setText(R.string.error_no_accelerometer_sensor);
+        }
     }
 
     @Override
