@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Pause" />
+
+        <TextView
+            android:id="@+id/textview_inclination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_pause"
+            android:text="@string/inclination"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_inclination_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_pause"
+            android:layout_toRightOf="@id/textview_inclination"
+            android:layout_alignBaseline="@id/textview_inclination"
+            android:paddingLeft="5dp" />
+
+        <TextView
+            android:id="@+id/textview_pitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_inclination"
+            android:text="@string/pitch"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_pitch_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_inclination"
+            android:layout_toRightOf="@id/textview_pitch"
+            android:layout_alignBaseline="@id/textview_pitch"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/textview_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_pitch"
+            android:text="@string/roll"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_roll_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_pitch"
+            android:layout_toRightOf="@id/textview_roll"
+            android:layout_alignBaseline="@id/textview_roll"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/textview_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_roll"
+            android:text="@string/rotation"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_rotation_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_roll"
+            android:layout_toRightOf="@id/textview_rotation"
+            android:layout_alignBaseline="@id/textview_rotation" />
+
+        <TextView
+            android:id="@+id/textview_facing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation"
+            android:text="@string/facing"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_facing_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation"
+            android:layout_toRightOf="@id/textview_facing"
+            android:layout_alignBaseline="@id/textview_facing" />
+
+        <TextView
+            android:id="@+id/textview_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_facing"
+            android:text="@string/compass"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_compass_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_facing"
+            android:layout_toRightOf="@id/textview_compass"
+            android:layout_alignBaseline="@id/textview_compass"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_compass"
+            android:layout_centerHorizontal="true"
+            android:text="@string/accelerometer"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer"
+            android:text="@string/axis_x"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer"
+            android:layout_toRightOf="@id/textview_accelerometer_x"
+            android:layout_alignBaseline="@id/textview_accelerometer_x"
+            android:paddingLeft="5dp" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer_x"
+            android:text="@string/axis_y"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer_x"
+            android:layout_toRightOf="@id/textview_accelerometer_y"
+            android:layout_alignBaseline="@id/textview_accelerometer_y" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer_y"
+            android:text="@string/axis_z"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_accelerometer_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer_y"
+            android:layout_toRightOf="@id/textview_accelerometer_z"
+            android:layout_alignBaseline="@id/textview_accelerometer_z" />
+
+        <TextView
+            android:id="@+id/textview_gravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_accelerometer_z"
+            android:layout_centerHorizontal="true"
+            android:text="@string/gravity"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_gravity_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity"
+            android:text="@string/axis_x"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gravity_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity"
+            android:layout_toRightOf="@id/textview_gravity_x"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignBaseline="@id/textview_gravity_x" />
+
+        <TextView
+            android:id="@+id/textview_gravity_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity_x"
+            android:text="@string/axis_y"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gravity_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity_x"
+            android:layout_toRightOf="@id/textview_gravity_y"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignBaseline="@id/textview_gravity_y" />
+
+        <TextView
+            android:id="@+id/textview_gravity_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity_y"
+            android:text="@string/axis_z"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gravity_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity_y"
+            android:layout_toRightOf="@id/textview_gravity_z"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignBaseline="@id/textview_gravity_z" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gravity_z"
+            android:layout_centerHorizontal="true"
+            android:text="@string/linear_acceleration"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration"
+            android:text="@string/axis_x"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration"
+            android:layout_toRightOf="@id/textview_linear_acceleration_x"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignBaseline="@id/textview_linear_acceleration_x" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration_x"
+            android:text="@string/axis_y"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration_x"
+            android:layout_toRightOf="@id/textview_linear_acceleration_y"
+            android:layout_alignBaseline="@id/textview_linear_acceleration_y"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration_y"
+            android:text="@string/axis_z"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_linear_acceleration_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration_y"
+            android:layout_toRightOf="@id/textview_linear_acceleration_z"
+            android:layout_alignBaseline="@id/textview_linear_acceleration_z"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/textview_magnetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_linear_acceleration_z"
+            android:layout_centerHorizontal="true"
+            android:text="@string/magnetic"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic"
+            android:text="@string/axis_x"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic"
+            android:layout_toRightOf="@id/textview_magnetic_x"
+            android:layout_alignBaseline="@id/textview_magnetic_x" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic_x"
+            android:text="@string/axis_y"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic_x"
+            android:layout_toRightOf="@id/textview_magnetic_y"
+            android:layout_alignBaseline="@id/textview_magnetic_y" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic_y"
+            android:text="@string/axis_z"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_magnetic_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic_y"
+            android:layout_toRightOf="@id/textview_magnetic_z"
+            android:layout_alignBaseline="@id/textview_magnetic_z" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_magnetic_z"
+            android:layout_centerHorizontal="true"
+            android:text="@string/gyroscope"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope"
+            android:text="@string/axis_x"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope"
+            android:layout_toRightOf="@id/textview_gyroscope_x"
+            android:layout_alignBaseline="@id/textview_gyroscope_x" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope_x"
+            android:text="@string/axis_y"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope_x"
+            android:layout_toRightOf="@id/textview_gyroscope_y"
+            android:layout_alignBaseline="@id/textview_gyroscope_y" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope_y"
+            android:text="@string/axis_z"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_gyroscope_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope_y"
+            android:layout_toRightOf="@id/textview_gyroscope_z"
+            android:layout_alignBaseline="@id/textview_gyroscope_z" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_gyroscope_z"
+            android:layout_centerHorizontal="true"
+            android:text="@string/rotation_vector"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector"
+            android:text="@string/axis_x"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_x_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector"
+            android:layout_toRightOf="@id/textview_rotation_vector_x"
+            android:layout_alignBaseline="@id/textview_rotation_vector_x" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_x"
+            android:text="@string/axis_y"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_y_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_x"
+            android:layout_toRightOf="@id/textview_rotation_vector_y"
+            android:layout_alignBaseline="@id/textview_rotation_vector_y" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_y"
+            android:text="@string/axis_z"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_z_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_y"
+            android:layout_toRightOf="@id/textview_rotation_vector_z"
+            android:layout_alignBaseline="@id/textview_rotation_vector_z" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_cos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_z"
+            android:text="@string/cos"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textview_rotation_vector_cos_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_z"
+            android:layout_toRightOf="@id/textview_rotation_vector_cos"
+            android:layout_alignBaseline="@id/textview_rotation_vector_cos" />
+
+        <TextView
+            android:id="@+id/textview_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_rotation_vector_cos" />
+
+    </RelativeLayout>
+
+</ScrollView>
