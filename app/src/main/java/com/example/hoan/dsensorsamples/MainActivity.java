@@ -71,6 +71,9 @@ public class MainActivity extends BaseActivityWithFragment implements BaseFragme
             intent.putExtra(CompassActivity.DPROCESSEDSENSOR_TYPE,
                     DProcessedSensor.TYPE_3D_COMPASS_AND_DEPRECIATED_ORIENTATION);
             startActivity(intent);
+        } else if (FragmentSensorList.GYROSCOPE.equals(item)) {
+            mCurrentFragment = new FragmentGyroscopeAndRotationVector();
+            showFragment(containerId, mCurrentFragment);
         }
     }
 

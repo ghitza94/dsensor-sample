@@ -3,9 +3,9 @@
 
     <string name="accelerometer">Accelerometer</string>
     <string name="axis">Axis</string>
-    <string name="axis_x">X</string>
-    <string name="axis_y">Y</string>
-    <string name="axis_z">Z</string>
+    <string name="axis_x">X:</string>
+    <string name="axis_y">Y:</string>
+    <string name="axis_z">Z:</string>
     <string name="compass">Compass</string>
     <string name="cos">Cos</string>
     <string name="depreciated_orientation">Depreciated Orientation</string>
@@ -25,9 +25,15 @@
     <string name="rotation">Rotation</string>
     <string name="rotation_vector">Rotation vector</string>
 
+    <string name="button_pause">Pause</string>
+    <string name="button_resume">Resume</string>
+
     <string name="error_no_accelerometer_sensor">Fail to start. The required accelerometer sensor is not available on this device</string>
     <string name="error_no_magnetic_field_sensor">Fail to start. The required magnetic field sensor is not available on this device</string>
 
     <string name="title_activity_compass">Compass</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hoan.dsensorsamples.FragmentGyroscopeAndRotationVector">
+
+    <Button
+        android:id="@+id/button_resume_pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/button_pause" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button_resume_pause"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/gyroscope" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_x" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_x_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope"
+        android:layout_toRightOf="@id/textview_gyroscope_x"
+        android:layout_alignBaseline="@id/textview_gyroscope_x" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope_x"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_y" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope_x"
+        android:layout_toRightOf="@id/textview_gyroscope_y"
+        android:layout_alignBaseline="@id/textview_gyroscope_y" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope_y"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_z" />
+
+    <TextView
+        android:id="@+id/textview_gyroscope_z_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_gyroscope_y"
+        android:layout_toRightOf="@id/textview_gyroscope_z"
+        android:layout_alignBaseline="@id/textview_gyroscope_z" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textview_gyroscope_z"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/rotation_vector" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_x" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_x_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector"
+        android:layout_toRightOf="@id/textview_rotation_vector_x"
+        android:layout_alignBaseline="@id/textview_rotation_vector_x" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector_x"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_y" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector_x"
+        android:layout_toRightOf="@id/textview_rotation_vector_y"
+        android:layout_alignBaseline="@id/textview_rotation_vector_y" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector_y"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/axis_z" />
+
+    <TextView
+        android:id="@+id/textview_rotation_vector_z_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_rotation_vector_y"
+        android:layout_toRightOf="@id/textview_rotation_vector_z"
+        android:layout_alignBaseline="@id/textview_rotation_vector_z" />
+
+</RelativeLayout>

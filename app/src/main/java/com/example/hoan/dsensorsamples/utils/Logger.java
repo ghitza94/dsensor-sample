@@ -4,11 +4,8 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.hoan.dsensorsamples.CompassActivity;
-import com.example.hoan.dsensorsamples.FragmentAccelerometer;
-import com.example.hoan.dsensorsamples.FragmentAll;
 import com.example.hoan.dsensorsamples.FragmentSensorInfo;
 import com.example.hoan.dsensorsamples.FragmentSensorList;
-import com.example.hoan.dsensorsamples.FragmentUpAndDownMotion;
 import com.example.hoan.dsensorsamples.MainActivity;
 
 import org.apache.commons.io.FileUtils;
@@ -27,14 +24,11 @@ public class Logger {
     private static String LOG_DIR;
 
 	private static final List<String> DEBUG_CLASSES = Arrays.asList(
-            CompassActivity.class.getSimpleName(),
-			FragmentAccelerometer.class.getSimpleName(),
-			FragmentAll.class.getSimpleName(),
-			FragmentSensorInfo.class.getSimpleName(),
-			FragmentSensorList.class.getSimpleName(),
-			FragmentUpAndDownMotion.class.getSimpleName(),
-			MainActivity.class.getSimpleName(),
-            "SensorExpandableAdapter"
+            //CompassActivity.class.getSimpleName(),
+			//FragmentSensorInfo.class.getSimpleName(),
+			//FragmentSensorList.class.getSimpleName(),
+			//MainActivity.class.getSimpleName(),
+            //"SensorExpandableAdapter"
     );
 
 	private Logger() {

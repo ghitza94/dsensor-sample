@@ -25,6 +25,7 @@ public class FragmentSensorList extends BaseFragment {
     public static final String COMPASS_FLAT_ONLY = "Compass flat only";
     public static final String COMPASS_3D_AND_DEPRECIATED_ORIENTATION = "3D Compass & depreciated Orientation";
     public static final String COMPASS_FLAT_ONLY_AND_DEPRECIATED_ORIENTATION = "Compass flat only & depreciated Orientation";
+    public static final String GYROSCOPE = "Gyroscope";
 
     //private static final String[] LIST_ITEMS = {"Sensors info", "Accelerometer", "Compass", "Compass flat only and Orientation",
     //        "Up and Down Motion", "All"};
@@ -79,6 +80,7 @@ public class FragmentSensorList extends BaseFragment {
             SENSOR_HASHMAP.put("Sensors info", null);
             SENSOR_HASHMAP.put("Compass", Arrays.asList(COMPASS_3D, COMPASS_FLAT_ONLY,
                     COMPASS_3D_AND_DEPRECIATED_ORIENTATION, COMPASS_FLAT_ONLY_AND_DEPRECIATED_ORIENTATION));
+            SENSOR_HASHMAP.put(GYROSCOPE, Arrays.asList(GYROSCOPE));
         }
 
         @Override
